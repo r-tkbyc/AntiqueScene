@@ -16,7 +16,8 @@
     <a-scene mindar-image="filterMinCF:0.001; filterBeta: 0.01; imageTargetSrc: image/mind/targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <img id="card" src="image/target/imageTarget_100mm(95per).jpg" />
-        <a-asset-item id="antiqueModel" src="model/antique.glb"></a-asset-item>
+        <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
+        <a-asset-item id="antiqueModel" src="model/antique.gltf"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -29,9 +30,11 @@
         <a-entity scale="1 1 1">
           <!-- <a-plane src="#card" position="0 0 0" rotation="" scale="0.9 0.9 0.9" height="1" width="1"></a-plane> -->
           <a-gltf-model src="#antiqueModel" position="0 0 -0.33" rotation="" scale="0.5 0.5 0.5">
+          <a-gltf-model src="#avatarModel" position="0 0 -0.5" rotation="" scale="0.005 0.005 0.005" 
+                        animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-entity>
       </a-entity>
-      <a-text style="color: red;">Ver1.2.3</a-text>
+      <a-text style="color: red;">Ver1.2.2</a-text>
     </a-scene>
   </body>
 </html>
