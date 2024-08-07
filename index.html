@@ -18,20 +18,24 @@
         const rightDoor = document.querySelector('#right-door');
         
         sceneEl.addEventListener('targetFound', (event) => {
-          leftDoor.setAttribute('animation', {
-            property: 'position',
-            to: '-10.48 0 0',
-            dur: 2000,
-            easing: 'easeOutSine',
-            delay: 1500
-          });
-          rightDoor.setAttribute('animation', {
-            property: 'position',
-            to: '10.48 0 0',
-            dur: 2000,
-            easing: 'easeOutSine',
-            delay: 1500
-          });
+          setTimeout(() => {
+            leftDoor.setAttribute('animation', {
+              property: 'position',
+              to: '-10.48 0 0',
+              dur: 2000,
+              easing: 'easeOutSine',
+              // delay: 2000
+            });
+          }, 5000);
+          setTimeout(() => {
+            rightDoor.setAttribute('animation', {
+              property: 'position',
+              to: '10.48 0 0',
+              dur: 2000,
+              easing: 'easeOutSine',
+              //delay: 2000
+            });
+          }, 5000);
         });
       });
     </script>
@@ -61,7 +65,7 @@
           <a-gltf-model src="#antiqueModel" position="0 0 -0.33" rotation="" scale="0.5 0.5 0.5" animation-mixer>
         </a-entity>
       </a-entity>
-      <a-text style="color: red;">Ver1.5.7</a-text>
+      <a-text style="color: red;">Ver1.5.9</a-text>
     </a-scene>
   </body>
 </html>
